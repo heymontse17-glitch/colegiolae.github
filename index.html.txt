@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colegio de Licenciados en Administración de Empresas del Estado de Quintana Roo A.C.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .bg-brand-green { background-color: #70c131; }
+        .text-brand-green { color: #70c131; }
+        .border-brand-green { border-color: #70c131; }
+        .hover-brand-green:hover { background-color: #5ea828; }
+        
+        /* Configuración del fondo con el logo centralizado */
+        .hero-section {
+            position: relative;
+            background-color: #ffffff;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+        }
+        
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            background-image: url('logo.jpeg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.12; /* Opacidad sutil para fondo */
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .event-card img {
+            transition: transform 0.5s ease;
+        }
+        .event-card:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Estilo para resaltar texto sobre el fondo con logo */
+        .text-shadow-sm {
+            text-shadow: 0 1px 2px rgba(255,255,255,0.8);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 font-sans antialiased">
+
+    <!-- Navegación -->
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center space-x-4">
+                    <img src="logo.jpeg" alt="[Logo del Colegio de Administradores]" class="h-16 w-auto object-contain" onerror="this.src='https://via.placeholder.com/60?text=COLEGIO'">
+                    <div class="hidden md:block">
+                        <span class="text-xs font-bold text-brand-green uppercase tracking-tighter">Colegio de Licenciados en Administración</span><br>
+                        <span class="text-sm font-extrabold text-gray-900 leading-none">Quintana Roo A.C.</span>
+                    </div>
+                </div>
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#inicio" class="text-gray-600 hover:text-brand-green font-semibold transition">Inicio</a>
+                    <a href="#historia" class="text-gray-600 hover:text-brand-green font-semibold transition">Historia</a>
+                    <a href="#mision-vision" class="text-gray-600 hover:text-brand-green font-semibold transition">Nosotros</a>
+                    <a href="#actividades" class="text-gray-600 hover:text-brand-green font-semibold transition">Actividades</a>
+                    <a href="#afiliate" class="bg-brand-green text-white px-6 py-2 rounded-full font-bold hover-brand-green transition shadow-md">Afiliarse</a>
+                </div>
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-btn" class="text-brand-green p-2">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Menú Móvil -->
+        <div id="mobile-menu" class="hidden bg-white border-t border-gray-100 lg:hidden">
+            <div class="px-4 py-4 space-y-2">
+                <a href="#inicio" class="block py-2 text-gray-700 font-bold border-b">Inicio</a>
+                <a href="#historia" class="block py-2 text-gray-700 font-bold border-b">Historia</a>
+                <a href="#mision-vision" class="block py-2 text-gray-700 font-bold border-b">Misión y Visión</a>
+                <a href="#actividades" class="block py-2 text-gray-700 font-bold border-b">Actividades</a>
+                <a href="#afiliate" class="block py-2 text-brand-green font-extrabold">Afiliarse Ahora</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section con Logo de Fondo Principal -->
+    <section id="inicio" class="hero-section pt-32 pb-24 px-4 mt-20">
+        <div class="max-w-5xl mx-auto text-center hero-content">
+            <h1 class="text-3xl md:text-6xl font-black text-gray-900 mb-6 leading-tight uppercase text-shadow-sm">
+                COLEGIO DE LICENCIADOS EN ADMINISTRACIÓN DE EMPRESAS <br>
+                <span class="text-brand-green italic">DEL ESTADO DE QUINTANA ROO A.C.</span>
+            </h1>
+            <p class="text-xl text-gray-800 mb-12 max-w-3xl mx-auto font-bold bg-white/60 inline-block p-4 rounded-2xl backdrop-blur-sm border border-white/40">
+                Fortaleciendo el ejercicio profesional de la administración con ética, liderazgo y visión de futuro en el Caribe Mexicano.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScJ0GskRMu_3JyPOT9OgdINGQfCZlNepKF92j5gxj9sIncfIQ/viewform?usp=header" target="_blank" class="bg-brand-green text-white px-10 py-4 rounded-xl font-bold text-lg shadow-lg hover-brand-green transition-transform transform hover:-translate-y-1">
+                    Acceso Directo a Registro
+                </a>
+                <a href="#actividades" class="bg-white border-2 border-brand-green text-brand-green px-10 py-4 rounded-xl font-bold text-lg hover:bg-green-50 transition shadow-sm">
+                    Ver Eventos Recientes
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Actividades y Eventos -->
+    <section id="actividades" class="py-20 bg-gray-50 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black text-gray-900 mb-4 uppercase tracking-tight">Actividades Realizadas</h2>
+                <div class="w-24 h-2 bg-brand-green mx-auto rounded-full"></div>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto italic font-medium">Nuestra trayectoria se construye con cada encuentro y colaboración profesional.</p>
+            </div>
+
+            <!-- Evento: Desayuno de Convivencia Profesional -->
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 mb-16">
+                <div class="grid grid-cols-1 lg:grid-cols-12">
+                    <div class="lg:col-span-4 bg-gray-50 flex items-center justify-center p-6 border-r border-gray-100">
+                        <img src="evento.jpeg" alt="[Cartel Desayuno de Convivencia]" class="max-h-[500px] w-auto rounded-lg shadow-xl transition hover:scale-105 duration-500">
+                    </div>
+                    <div class="lg:col-span-8 p-8 md:p-12">
+                        <div class="inline-block bg-blue-100 text-blue-600 px-4 py-1 rounded-full text-sm font-black mb-4 uppercase tracking-widest">
+                            Vínculo Profesional
+                        </div>
+                        <h3 class="text-4xl font-black text-gray-900 mb-6 leading-tight">
+                            DESAYUNO DE CONVIVENCIA PROFESIONAL
+                        </h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <svg class="w-6 h-6 text-brand-green mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                    <div>
+                                        <p class="text-xs font-black text-gray-400 uppercase tracking-tighter">Horario</p>
+                                        <p class="font-bold text-gray-800">09:00 hrs</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <svg class="w-6 h-6 text-brand-green mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                    <div>
+                                        <p class="text-xs font-black text-gray-400 uppercase tracking-tighter">Ubicación</p>
+                                        <p class="font-bold text-gray-800 italic">Sede: Av. Insurgentes 918</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Galería Desayuno -->
+                        <div class="grid grid-cols-5 gap-3">
+                            <img src="e1.jpeg" class="h-24 w-full object-cover rounded-xl shadow-sm hover:scale-105 transition" alt="[Foto de evento 1]">
+                            <img src="e2.jpeg" class="h-24 w-full object-cover rounded-xl shadow-sm hover:scale-105 transition" alt="[Foto de evento 2]">
+                            <img src="e3.jpeg" class="h-24 w-full object-cover rounded-xl shadow-sm hover:scale-105 transition" alt="[Foto de evento 3]">
+                            <img src="e4.jpeg" class="h-24 w-full object-cover rounded-xl shadow-sm hover:scale-105 transition" alt="[Foto de evento 4]">
+                            <img src="e5.jpeg" class="h-24 w-full object-cover rounded-xl shadow-sm hover:scale-105 transition" alt="[Foto de evento 5]">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Evento: Fiesta de los 70's -->
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 mb-16">
+                <div class="grid grid-cols-1 lg:grid-cols-12">
+                    <div class="lg:col-span-4 bg-gray-900 flex items-center justify-center p-4">
+                        <img src="3...jpeg" alt="[Cartel Fiesta de los 70s]" class="max-h-[500px] w-auto rounded-lg shadow-2xl transition hover:scale-105 duration-500">
+                    </div>
+                    <div class="lg:col-span-8 p-8 md:p-12">
+                        <div class="inline-block bg-orange-100 text-orange-600 px-4 py-1 rounded-full text-sm font-black mb-4 uppercase tracking-widest">
+                            Social e Integración
+                        </div>
+                        <h3 class="text-4xl font-black text-gray-900 mb-6 leading-tight">
+                            FIESTA DE LOS 70´s: Cena - Baile
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <svg class="w-6 h-6 text-brand-green mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                    <div>
+                                        <p class="text-xs font-black text-gray-400 uppercase tracking-tighter">Fecha</p>
+                                        <p class="font-bold text-gray-800">Viernes 27 de junio, 20:00 hrs</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <img src="4...jpeg" class="h-48 w-full object-cover rounded-2xl shadow-md" alt="[Foto Fiesta 70s A]">
+                            <img src="5.jpeg" class="h-48 w-full object-cover rounded-2xl shadow-md" alt="[Foto Fiesta 70s B]">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Evento: Toma de Protesta -->
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <div class="p-8 md:p-12">
+                        <div class="inline-block bg-green-100 text-brand-green px-4 py-1 rounded-full text-sm font-black mb-4 uppercase tracking-widest">
+                            Institucional
+                        </div>
+                        <h3 class="text-3xl font-black text-gray-900 mb-6 leading-tight">
+                            Toma de Protesta del Colegio
+                        </h3>
+                        <div class="space-y-4 mb-8">
+                            <p class="font-bold text-gray-800">29 de mayo | Anexo IT Chetumal</p>
+                            <p class="font-medium text-gray-600 italic">Bajo el liderazgo del Mtro. Jose Manuel Meneses Domingo.</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 p-2 bg-gray-100">
+                        <img src="1....jpeg" class="h-full w-full object-cover rounded-xl" alt="[Toma de Protesta 1]">
+                        <img src="2...jpeg" class="h-full w-full object-cover rounded-xl" alt="[Toma de Protesta 2]">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Misión y Visión -->
+    <section id="mision-vision" class="py-20 bg-white px-4">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="bg-green-50 p-10 rounded-3xl border-l-8 border-brand-green shadow-sm">
+                <h2 class="text-2xl font-black text-brand-green mb-4 uppercase tracking-tight">MISIÓN</h2>
+                <p class="text-gray-700 leading-relaxed font-bold">
+                    Agrupar y representar a los Licenciados en Administración en Quintana Roo, fomentando la educación continua y el ejercicio ético en beneficio de la sociedad.
+                </p>
+            </div>
+            <div class="bg-white p-10 rounded-3xl border border-gray-100 shadow-xl">
+                <h2 class="text-2xl font-black text-brand-green mb-4 uppercase tracking-tight">VISIÓN</h2>
+                <p class="text-gray-700 leading-relaxed font-bold">
+                    Ser el referente líder en formación y vinculación de profesionales administrativos en el estado, reconocido por su excelencia y compromiso.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Historia -->
+    <section id="historia" class="py-20 bg-gray-50 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-black text-gray-900 mb-12 uppercase">Nuestra Historia</h2>
+            <div class="bg-white p-8 md:p-12 rounded-3xl shadow-lg border border-gray-100">
+                <p class="text-gray-600 leading-relaxed text-lg mb-6 font-bold italic">
+                    Fundado en 1991 para unir al gremio administrativo, hoy contamos con sede propia en la Av. Insurgentes 918, un espacio dedicado al crecimiento de nuestros agremiados.
+                </p>
+                <div class="h-1 w-20 bg-brand-green mx-auto mb-6"></div>
+                <p class="font-black text-gray-900 uppercase tracking-widest text-sm">34 Años de Compromiso Profesional</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registro -->
+    <section id="afiliate" class="py-20 bg-brand-green text-white px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-black mb-8 uppercase tracking-tighter">Forma parte del Colegio</h2>
+            <p class="text-xl mb-12 opacity-90 font-bold">Únete a la red más importante de administradores de Quintana Roo.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScJ0GskRMu_3JyPOT9OgdINGQfCZlNepKF92j5gxj9sIncfIQ/viewform?usp=header" target="_blank" class="bg-white text-brand-green px-12 py-5 rounded-2xl font-black text-xl hover:bg-gray-100 transition shadow-2xl inline-block transform hover:scale-105 duration-300">
+                REGÍSTRATE AQUÍ
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100 py-16 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
+            <img src="logo.jpeg" alt="[Logo Footer]" class="h-24 w-auto mb-8 object-contain" onerror="this.src='https://via.placeholder.com/80?text=COLEGIO'">
+            <p class="font-black text-gray-900 text-xl mb-4 leading-tight uppercase">
+                Colegio de Licenciados en Administración de Empresas <br>
+                del Estado de Quintana Roo A.C.
+            </p>
+            <p class="text-gray-400 font-bold text-xs uppercase tracking-widest">
+                Av. Insurgentes 918, Chetumal, Quintana Roo | © 2026
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Lógica del Menú Móvil
+        const btn = document.getElementById('mobile-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => menu.classList.add('hidden'));
+        });
+    </script>
+</body>
+</html>
